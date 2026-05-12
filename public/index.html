@@ -1,190 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz App</title>
-  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-  <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
-
-  <div id="quiz-question" class="bg-white shadow-lg rounded-2xl p-6 w-full max-w-xl">
-
-    <!-- Header -->
-    <div class="flex justify-between items-center mb-4">
-      <h2 class="text-xl font-bold">BrainSpark</h2>
-      <span id="timer" class="text-red-500 font-semibold"></span>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+    <div class="bg-white shadow-lg rounded-2xl p-6 w-full max-w-xl">
+        <a href="bar.html" class="font-bold text-blue-500 hover:text-blue-700" style="margin-left: 420px; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Need Help <i class="fa-solid fa-question"></i></a>
+        <img src="/images/brainy.png" alt="logo" style="width: 200px; margin-left: auto; margin-right: auto;">
+        <p class="text-center font-bold text-black mt-3 text-2xl">Computer Architecture (CSC 212)</p>
+        <h3 class="text-center font-bold text-black text-6xl mt-4" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Welcome!</h3>
+        <a href="login.html"><button class="mt-5 cursor-pointer w-32 bg-blue-500 text-white py-2 rounded-xl hover:bg-blue-600 font-bold mb-5" style="margin-left: 200px">Start</button></a>
+        
     </div>
-
-    <!-- Question -->
-    <div id="question" class="text-lg font-medium mb-4"></div>
-
-    <!-- Options -->
-    <!-- <button class="w-full text-left"> -->
-    <div id="options" class="space-y-3"></div>
-    <!-- <div id="options" class="space-y-3 w-full border p-2 rounded-lg hover:bg-gray-100 mt-2 cursor-pointer"><label for="d">B. Storage</label></div>
-         <div id="options" class="space-y-3 w-full border p-2 rounded-lg hover:bg-gray-100 mt-2 cursor-pointer"><label for="d">C. Data</label></div>
-         <div id="options" class="space-y-3 w-full border p-2 rounded-lg hover:bg-gray-100 mt-2 cursor-pointer">D. Extra bit</div> -->
-    <!-- </button> -->
-
-    <!-- Button -->
-     <div class="flex justify-between mt-5">
-      <span class="text-sm font-medium" id="noofquiz">Question 3 of 10</span>
-      <span class="text-sm font-medium" id="quizpct">30%</span>
-    </div>
-     <div class="w-full bg-gray-300 rounded-full mt-2 h-4  overflow-hidden">
-      <div class="bg-blue-500 h-4 rounded-full transition-all duration-500"
-            id="progress">
-      </div>
-    </div>
-    <div class="flex justify-between items-center">
-      <button onclick="prevQuestion()"
-        class="mt-5 w-20 bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 cursor-pointer">Previous</button>
-      <div class="text-center mt-2" id="noofquiz"></div>
-      <button onclick="nextQuestion()"
-        class="mt-5 w-20 bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 cursor-pointer">Next</button>
-    </div>
-  
-  </div>
-
-
-  <div class="bg-white shadow-lg rounded-2xl hidden p-6 w-full max-w-xl" id="result">
-    <h1 class="font-bold text-3xl text-center text-black px-6 py-4"
-      style="font-family: 'Times New Roman', Times, serif;">Your BrainSpark Results</h1>
-    <div class="relative w-40 h-40 mr-auto ml-auto">
-      <div class="w-full h-full rounded-full" id="chart"></div>
-      <div class="absolute inset-4 bg-white rounded-full flex items-center justify-center"><span
-          class="text-3xl font-bold" id="percentage"></span>
-      </div>
-    </div>
-    <div class="flex justify-between">
-      <p class="font-bold font-mono text-green-500">Correct: <span id="correct"></span></p>
-      <button class="w-56">
-        <a href="index.html">
-          <p class="font-bold text-center border-none rounded-lg p-2 cursor-pointer hover:bg-gray-50 space-y-3 mt-3 text-2xl">
-            Start Again</p>
-        </a>
-      </button>
-      <p class="font-bold font-mono text-red-500">Wrong: <span id="wrong"></span></p>
-    </div>
-    <div class="border border-gray-300 rounded-lg overflow-hidden mt-5">
-      
-      <!-- Button -->
-      <button 
-        class="w-full flex justify-between items-center p-4 bg-white hover:bg-gray-50"
-        onclick="toggleAccordion('content-review')"
-      >
-        <span class="font-semibold text-2xl text-center">Review Quiz</span>
-        <span>+</span>
-      </button>
-
-      <!-- content review -->
-      <div id="content-review" class="hidden p-4 bg-gray-50 border-t">
-        <!-- <div class="flex justify-between mb-4">
-            <h2 class="text-xl font-bold">Question 1</h2>
-        </div>
-        <div id="question" class="text-lg font-medium mb-4">1. What is a parity bit used for?</div>
-        <button class="w-full text-left">
-         <div class="space-y-3 w-full border p-2 rounded-lg hover:bg-gray-100 cursor-pointer"><label for="d">A. Data Storage</label></div>
-         <div class="space-y-3 w-full border-2 border-green-500 bg-green-50 p-2 rounded-lg hover:bg-gray-100 mt-2 cursor-pointer flex justify-between items-center"><span>B. Storage</span><span><i class="fa-solid fa-check text-green-500"></i></span></div>
-         <div class="space-y-3 w-full border p-2 rounded-lg hover:bg-gray-100 mt-2 cursor-pointer">C. Data</div>
-         <div class="space-y-3 w-full border-2 p-2 rounded-lg hover:bg-red-50 mt-2 cursor-pointer border-red-500 bg-red-100 flex justify-between items-center "><span>D. Extra bit</span><span class="text-red-500"><i class="fa-solid fa-xmark"></i></span></div>
-     </button>
-      </div> -->
-
-    </div>
-  </div>
-
-  <script src="./script.js"></script>
-
-  <!-- <script>
-const quiz = [
-  {
-    question: "What is a Data Bus?",
-    options: [
-      "Transfers control signals",
-      "Transfers data between components",
-      "Stores memory",
-      "Controls CPU"
-    ],
-    answer: 1
-  },
-  {
-    question: "Address bus is:",
-    options: [
-      "Bidirectional",
-      "Unidirectional",
-      "Used for data transfer",
-      "Stores instructions"
-    ],
-    answer: 1
-  }
-];
-
-let currentQuestion = 0;
-let timeLeft = 30;
-let timerInterval;
-
-function startTimer() {
-  clearInterval(timerInterval);
-  timeLeft = 30;
-
-  timerInterval = setInterval(() => {
-    timeLeft--;
-    document.getElementById("timer").textContent = "00:" + (timeLeft < 10 ? "0" : "") + timeLeft;
-
-    if (timeLeft <= 0) {
-      nextQuestion();
-    }
-  }, 1000);
-}
-
-function loadQuestion() {
-  const q = quiz[currentQuestion];
-  document.getElementById("question").textContent = q.question;
-
-  const optionsDiv = document.getElementById("options");
-  optionsDiv.innerHTML = "";
-
-  q.options.forEach((opt, index) => {
-    const btn = document.createElement("button");
-    btn.textContent = opt;
-    btn.className = "block w-full text-left px-4 py-2 border rounded-lg hover:bg-blue-100";
-
-    btn.onclick = () => selectOption(btn, index);
-
-    optionsDiv.appendChild(btn);
-  });
-
-  startTimer();
-}
-
-function selectOption(button, index) {
-  const buttons = document.querySelectorAll("#options button");
-  buttons.forEach(btn => btn.classList.remove("bg-blue-200"));
-
-  button.classList.add("bg-blue-200");
-}
-
-function nextQuestion() {
-  currentQuestion++;
-
-  if (currentQuestion < quiz.length) {
-    loadQuestion();
-  } else {
-    document.querySelector(".bg-white").innerHTML =
-      "<h2 class='text-xl font-bold text-center'>Quiz Completed 🎉</h2>";
-    clearInterval(timerInterval);
-  }
-}
-
-loadQuestion();
-</script> -->
-
+    
+    
 </body>
-
 </html>

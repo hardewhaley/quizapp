@@ -21,7 +21,7 @@ form.addEventListener("submit", function (e) {
         errorMessage.textContent = "";
 
         // Redirect to quiz page
-        window.location.href = "/public/index.html";
+        window.location.href = "/public/quiz.html";
     } else {
         // Show error message
         errorMessage.textContent =
