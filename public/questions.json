@@ -1,0 +1,202 @@
+[
+  {
+    "question": "The first generation of computers used which technology?",
+    "options": [
+      "Transistors",
+      "Vacuum tubes",
+      "Integrated circuits",
+      "Microprocessors"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which generation introduced transistors?",
+    "options": [
+      "First",
+      "Second",
+      "Third",
+      "Fourth"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Integrated Circuits (ICs) are associated with which generation?",
+    "options": [
+      "First",
+      "Second",
+      "Third",
+      "Fifth"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Microprocessors were first introduced in which generation?",
+    "options": [
+      "Second",
+      "Third",
+      "Fourth",
+      "Fifth"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Artificial Intelligence is mainly associated with which generation?",
+    "options": [
+      "Third",
+      "Fourth",
+      "Fifth",
+      "First"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Which of the following is used for simple error detection?",
+    "options": [
+      "Encryption",
+      "Parity bit",
+      "Compression",
+      "Multiplexing"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Even parity means:",
+    "options": [
+      "Total number of 1s is odd",
+      "Total number of 0s is even",
+      "Total number of 1s is even",
+      "Total number of bits is even"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Which technique can both detect and correct errors?",
+    "options": [
+      "Parity check",
+      "Checksum",
+      "Hamming code",
+      "Echo check"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "A parity error occurs when:",
+    "options": [
+      "Bits are missing",
+      "Parity does not match expected value",
+      "Signal is delayed",
+      "Voltage is high"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which method uses redundant bits placed at specific positions?",
+    "options": [
+      "Checksum",
+      "CRC",
+      "Hamming code",
+      "Parity"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Which bus carries actual data between components?",
+    "options": [
+      "Address bus",
+      "Control bus",
+      "Data bus",
+      "Expansion bus"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "The address bus is used to:",
+    "options": [
+      "Transfer instructions",
+      "Store data",
+      "Specify memory location",
+      "Control operations"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Which bus carries control signals like read/write?",
+    "options": [
+      "Data bus",
+      "Address bus",
+      "Control bus",
+      "System bus"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "A system bus consists of:",
+    "options": [
+      "Only data bus",
+      "Data and address bus",
+      "Data, address, and control buses",
+      "Control bus only"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Increasing the width of the data bus will:",
+    "options": [
+      "Reduce memory",
+      "Increase speed of data transfer",
+      "Reduce CPU performance",
+      "Affect only control signals"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The first step in the instruction cycle is:",
+    "options": [
+      "Decode",
+      "Execute",
+      "Fetch",
+      "Store"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "During the fetch phase, the CPU gets instructions from:",
+    "options": [
+      "ALU",
+      "Registers",
+      "Main memory",
+      "Cache only"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "The decode phase involves:",
+    "options": [
+      "Executing instruction",
+      "Interpreting instruction",
+      "Storing data",
+      "Sending signals"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which component performs arithmetic and logical operations?",
+    "options": [
+      "Control Unit",
+      "ALU",
+      "Register",
+      "Cache"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "The execute phase is responsible for:",
+    "options": [
+      "Fetching instructions",
+      "Decoding instructions",
+      "Carrying out operations",
+      "Storing instructions"
+    ],
+    "answer": 2
+  }
+]

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+    <div class="bg-white shadow-lg rounded-2xl p-6 w-full max-w-xl">
+        <h2 class="text-center font-bold text-2xl"
+            style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">BrainSpark</h2>
+            <p id="error-message" class="hidden text-red-600 text-sm mt-3 font-medium text-center">
+            </p>
+        <div class="flex items-center justify-center">
+            <form id="login-form">
+                <input id="username" type="text" placeholder="Username"
+                    class="border-b p-2 w-full mr-auto ml-auto hover:bg-gray-200 mt-3" required>
+
+                <input id="matric-number" type="text" placeholder="Matric Number"
+                    class="border-b p-2 w-full mr-auto ml-auto hover:bg-gray-200 mt-3" required>
+
+                <button type="submit"
+                    class="mt-5 cursor-pointer w-64 bg-blue-500 text-white py-2 rounded-xl hover:bg-blue-600 font-bold"
+                    style="margin-left: 150px">
+                    Login
+                </button>
+            </form>
+        </div>
+
+    </div>
+    <script src="./login.js"></script>
+</body>
+
+</html>

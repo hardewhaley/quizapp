@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "tailwind": "npx @tailwindcss/cli -i ./src/input.css -o ./public/style.css --watch"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.27",
+    "postcss": "^8.5.8"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.2.2",
+    "tailwindcss": "^4.2.2"
+  }
+}

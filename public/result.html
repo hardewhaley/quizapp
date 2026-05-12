@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrainSpark  Result</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+    <div class="bg-white shadow-lg rounded-2xl p-6 w-full max-w-xl">
+        <h1 class="font-bold text-3xl text-center text-black px-6 py-4" style="font-family: 'Times New Roman', Times, serif;">Your BrainSpark Results</h1>
+    <div class="relative w-40 h-40 mr-auto ml-auto">
+    <div class="w-full h-full rounded-full" style="background: conic-gradient(#3b82f6 60%, #e5e7eb 0);"></div>
+    <div class="absolute inset-4 bg-white rounded-full flex items-center justify-center"><span class="text-3xl font-bold">60%</span>
+    </div>
+  </div>
+        <div class="flex justify-between">
+            <p class="font-bold font-mono text-green-500">Correct: 6</p>
+            <p class="font-bold font-mono text-blue-500">Score: 6</p>
+        </div>
+        <div class="flex justify-between">
+            <p class="font-bold font-mono text-red-500">Wrong: 4</p>
+            <p class="font-bold font-mono text-blue-500">Skip: 0</p>
+        </div>
+        <button class="w-94" style="margin-left: 80px;">
+            <a href="index.html">
+                <p class="font-bold text-center border rounded-lg p-2 cursor-pointer hover:bg-gray-100 space-y-3 mt-3 text-2xl">Start Again</p>
+            </a>
+            
+                <!-- <p class="font-bold text-center border rounded-lg p-2 cursor-pointer hover:bg-gray-100 space-y-3 mt-3 text-2xl">Review Quiz</p> -->
+            
+        </button>
+        <div class="max-w-xl mx-auto space-y-4">
+            <div class="border border-gray-300 rounded-lg overflow-hidden">
+          
+          <!-- Button -->
+          <button 
+            class="w-full flex justify-between items-center text-center p-4 bg-white hover:bg-gray-50"
+            onclick="toggleAccordion('content1')"
+          >
+            <span class="font-semibold text-center">What is Tailwind CSS?</span>
+            
+          </button>
+    
+          <!-- Content -->
+          <div id="content1" class="hidden p-4 bg-gray-50 border-t">
+            Tailwind CSS is a utility-first CSS framework used for building modern user interfaces quickly.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci minus placeat eius quaerat libero sed reiciendis aspernatur? Vel laudantium sapiente, fuga, sint culpa recusandae illo sit neque dolorem iure natus?
+          </div>
+    
+        </div>
+        </div>
+    </div>
+    
+</body>
+</html>
